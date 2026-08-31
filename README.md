@@ -135,14 +135,4 @@ Metrics covered:
 - **Stability** — Max-Sensitivity, RIS, ROS, RRS, MPRT
 - **Fairness** — Fidelity Disparity, Stability Disparity, Consistency Disparity, Sparsity Disparity
 
-## Notes
 
-- Scripts currently use absolute paths (`/home/aqsa/xai-cdss/...`). If you
-  clone this elsewhere, edit the `REPO_ROOT` / `DATA_PATH` constants at the
-  top of each script.
-- Trained model weights (`.h5`, `.joblib`) and per-run outputs (`.txt`, `.csv`,
-  `.png`) land in `results/` and are gitignored. Re-running the training
-  scripts regenerates them deterministically (fixed seed = `42`).
-- The MIMIC demo cohort has ~140 ICU stays and ~14% mortality. Results on
-  it are illustrative, not statistically rigorous — for real benchmarking
-  use full MIMIC-IV.
