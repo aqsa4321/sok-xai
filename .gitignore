@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+.ipynb_checkpoints/
+
+# Results (regenerable)
+results/
+
+# Big data files
+data/mimic_full.csv
+data/mimic-iv-clinical-database-demo-2.2.zip
+data/skin_cancer/**/*.jpg
+data/skin_cancer/**/*.jpeg
+data/skin_cancer/**/*.png
+data/cell_cancer/**/*.jpg
+data/cell_cancer/**/*.jpeg
+data/cell_cancer/**/*.png
+
+# Model weights
+*.h5
+*.joblib
+
+# OS junk
+.DS_Store
+__MACOSX/
+
+# Editor
+.vscode/
+.idea/

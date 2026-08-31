@@ -1,0 +1,27 @@
+name: sok-xai
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - numpy=1.26.*
+  - pandas=2.2.*
+  - scipy=1.13.*
+  - scikit-learn=1.4.*
+  - scikit-image=0.22.*
+  - matplotlib=3.8.*
+  - seaborn=0.13.*
+  - joblib=1.4.*
+  - opencv=4.9.*
+  - h5py=3.10.*
+  - jupyter
+  - notebook
+  - pip:
+      - tensorflow==2.15.0
+      - shap==0.44.1
+      - lime==0.2.0.1
+      - interpret==0.5.1
+      - xgboost==2.0.*
+      - lightgbm==4.3.*
+      - quantus==0.5.*
