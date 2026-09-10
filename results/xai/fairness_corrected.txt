@@ -1,0 +1,53 @@
+Fairness evaluation with BH correction, effect size, and 95% bootstrap CI.
+BH applied over 44 valid tests (4 EBM-inconsistency rows excluded).
+
+method attribute  metric                 n0   n1      p_raw       p_bh       r     CI_low    CI_high   sig
+----------------------------------------------------------------------------------------------------------
+EBM    gender     pred_gap_fidelity     234  166     0.7036     0.8122   0.022    -0.0262     0.0350      
+EBM    gender     instability           234  166     0.2376     0.4356   0.069    -0.0152     0.1166      
+EBM    gender     inconsistency         234  166        n/a        n/a     n/a        n/a        n/a   n/a
+EBM    gender     sparsity              234  166     0.9877     0.9877   0.001    -0.9630     0.9548      
+EBM    insurance  pred_gap_fidelity     180  220     0.0000     0.0001   0.250     0.0403     0.0992     *
+EBM    insurance  instability           180  220     0.6941     0.8122  -0.023    -0.0830     0.0472      
+EBM    insurance  inconsistency         180  220        n/a        n/a     n/a        n/a        n/a   n/a
+EBM    insurance  sparsity              180  220     0.8195     0.8585  -0.013    -1.2269     0.6854      
+EBM    race       pred_gap_fidelity     254  146     0.4551     0.6675  -0.045    -0.0440     0.0196      
+EBM    race       instability           254  146     0.1559     0.3611  -0.085    -0.1251     0.0100      
+EBM    race       inconsistency         254  146        n/a        n/a     n/a        n/a        n/a   n/a
+EBM    race       sparsity              254  146     0.0116     0.0427   0.151     0.2131     2.2623     *
+EBM    age        pred_gap_fidelity     191  209     0.0000     0.0001   0.248     0.0372     0.0972     *
+EBM    age        instability           191  209     0.7330     0.8122  -0.020    -0.0803     0.0494      
+EBM    age        inconsistency         191  209        n/a        n/a     n/a        n/a        n/a   n/a
+EBM    age        sparsity              191  209     0.2230     0.4267  -0.070    -1.6270     0.2666      
+LIME   gender     pred_gap_fidelity     234  166     0.9772     0.9877  -0.002    -0.0242     0.0269      
+LIME   gender     instability           234  166     0.1349     0.3387   0.088    -0.0214     0.1441      
+LIME   gender     inconsistency         234  166     0.1386     0.3387   0.087    -0.0170     0.1389      
+LIME   gender     sparsity              234  166     0.2839     0.4997  -0.063    -1.6792     0.7172      
+LIME   insurance  pred_gap_fidelity     180  220     0.0000     0.0000   0.365     0.0529     0.1016     *
+LIME   insurance  instability           180  220     0.1802     0.3803   0.078    -0.0287     0.1354      
+LIME   insurance  inconsistency         180  220     0.7946     0.8527  -0.015    -0.0945     0.0634      
+LIME   insurance  sparsity              180  220     0.3347     0.5665   0.056    -0.6318     1.7435      
+LIME   race       pred_gap_fidelity     254  146     0.0781     0.2147  -0.106    -0.0482     0.0035      
+LIME   race       instability           254  146     0.1901     0.3803  -0.079    -0.1342     0.0321      
+LIME   race       inconsistency         254  146     0.6197     0.7790   0.030    -0.0784     0.0879      
+LIME   race       sparsity              254  146     0.4423     0.6675   0.046    -0.8158     1.6266      
+LIME   age        pred_gap_fidelity     191  209     0.0000     0.0000   0.434     0.0672     0.1150     *
+LIME   age        instability           191  209     0.1856     0.3803   0.077    -0.0275     0.1332      
+LIME   age        inconsistency         191  209     0.5128     0.7050   0.038    -0.0617     0.0922      
+LIME   age        sparsity              191  209     0.4950     0.7026   0.039    -1.0307     1.3421      
+SHAP   gender     pred_gap_fidelity     234  166     0.5981     0.7741  -0.031    -0.0349     0.0184      
+SHAP   gender     instability           234  166     0.7384     0.8122   0.020    -0.0846     0.0865      
+SHAP   gender     inconsistency         234  166     0.6522     0.7971   0.026    -0.0835     0.0540      
+SHAP   gender     sparsity              234  166     0.4147     0.6516   0.048    -2.9680     3.3493      
+SHAP   insurance  pred_gap_fidelity     180  220     0.0000     0.0000   0.293     0.0355     0.0882     *
+SHAP   insurance  instability           180  220     0.0000     0.0000   0.295     0.0990     0.2732     *
+SHAP   insurance  inconsistency         180  220     0.0016     0.0078   0.183    -0.0494     0.0971     *
+SHAP   insurance  sparsity              180  220     0.0027     0.0117   0.174    -0.8419     5.6456     *
+SHAP   race       pred_gap_fidelity     254  146     0.5500     0.7333  -0.036    -0.0337     0.0219      
+SHAP   race       instability           254  146     0.3746     0.6104   0.053    -0.0179     0.1739      
+SHAP   race       inconsistency         254  146     0.0374     0.1098   0.125     0.0408     0.1979      
+SHAP   race       sparsity              254  146     0.0183     0.0621   0.141     1.6818     8.5884      
+SHAP   age        pred_gap_fidelity     191  209     0.0000     0.0000   0.378     0.0566     0.1074     *
+SHAP   age        instability           191  209     0.0000     0.0000   0.279     0.0756     0.2512     *
+SHAP   age        inconsistency         191  209     0.0056     0.0222   0.161    -0.0706     0.0735     *
+SHAP   age        sparsity              191  209     0.0242     0.0760   0.130    -2.6033     3.8240      
