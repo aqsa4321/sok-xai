@@ -1,0 +1,298 @@
+nohup: ignoring input
+2026-05-12 16:34:11.403515: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:479] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2026-05-12 16:34:11.423347: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:10575] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2026-05-12 16:34:11.423376: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1442] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2026-05-12 16:34:11.434516: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2026-05-12 16:34:12.062740: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Loading and preparing data...
+✓ Data loaded: 195 samples, 22 features
+✓ Train set:   156 samples
+✓ Test set:    39 samples
+✓ Class counts (full): {1: 147, 0: 48}
+
+Training models...
+✓ SVM trained | acc=0.9231 prec=0.9303 rec=0.9231 f1=0.9182
+✓ EBM trained | acc=0.9231 prec=0.9219 rec=0.9231 f1=0.9217
+
+✓ Selected 30 class-0 samples
+✓ Selected 30 class-1 samples
+
+Evaluating SHAP...
+
+Processing CLASS0 samples for SHAP...
+Processing class0 sample 1/30 (index 30)
+Processing class0 sample 2/30 (index 31)
+Processing class0 sample 3/30 (index 32)
+Processing class0 sample 4/30 (index 33)
+Processing class0 sample 5/30 (index 34)
+Processing class0 sample 6/30 (index 35)
+Processing class0 sample 7/30 (index 42)
+Processing class0 sample 8/30 (index 43)
+Processing class0 sample 9/30 (index 44)
+Processing class0 sample 10/30 (index 45)
+Processing class0 sample 11/30 (index 46)
+Processing class0 sample 12/30 (index 47)
+Processing class0 sample 13/30 (index 48)
+Processing class0 sample 14/30 (index 49)
+Processing class0 sample 15/30 (index 50)
+Processing class0 sample 16/30 (index 51)
+Processing class0 sample 17/30 (index 52)
+Processing class0 sample 18/30 (index 53)
+Processing class0 sample 19/30 (index 60)
+Processing class0 sample 20/30 (index 61)
+Processing class0 sample 21/30 (index 62)
+Processing class0 sample 22/30 (index 63)
+Processing class0 sample 23/30 (index 64)
+Processing class0 sample 24/30 (index 65)
+Processing class0 sample 25/30 (index 165)
+Processing class0 sample 26/30 (index 166)
+Processing class0 sample 27/30 (index 167)
+Processing class0 sample 28/30 (index 168)
+Processing class0 sample 29/30 (index 169)
+Processing class0 sample 30/30 (index 170)
+
+Processing CLASS1 samples for SHAP...
+Processing class1 sample 1/30 (index 0)
+Processing class1 sample 2/30 (index 1)
+Processing class1 sample 3/30 (index 2)
+Processing class1 sample 4/30 (index 3)
+Processing class1 sample 5/30 (index 4)
+Processing class1 sample 6/30 (index 5)
+Processing class1 sample 7/30 (index 6)
+Processing class1 sample 8/30 (index 7)
+Processing class1 sample 9/30 (index 8)
+Processing class1 sample 10/30 (index 9)
+Processing class1 sample 11/30 (index 10)
+Processing class1 sample 12/30 (index 11)
+Processing class1 sample 13/30 (index 12)
+Processing class1 sample 14/30 (index 13)
+Processing class1 sample 15/30 (index 14)
+Processing class1 sample 16/30 (index 15)
+Processing class1 sample 17/30 (index 16)
+Processing class1 sample 18/30 (index 17)
+Processing class1 sample 19/30 (index 18)
+Processing class1 sample 20/30 (index 19)
+Processing class1 sample 21/30 (index 20)
+Processing class1 sample 22/30 (index 21)
+Processing class1 sample 23/30 (index 22)
+Processing class1 sample 24/30 (index 23)
+Processing class1 sample 25/30 (index 24)
+Processing class1 sample 26/30 (index 25)
+Processing class1 sample 27/30 (index 26)
+Processing class1 sample 28/30 (index 27)
+Processing class1 sample 29/30 (index 28)
+Processing class1 sample 30/30 (index 29)
+
+SHAP RESULTS:
+============================================================
+
+CLASS0:
+----------------------------------------
+  Infidelity: 0.0010 ± 0.0006  (n=30)
+  Complexity: 2.3757 ± 0.2218  (n=30)
+  Sensitivity: 0.0925 ± 0.0288  (n=30)
+  Ris: 15.3388 ± 2.8643  (n=30)
+  Ros: 8.0548 ± 1.7988  (n=30)
+  Rrs: 21.1942 ± 3.5411  (n=30)
+  Faithfulness: 0.9015 ± 0.0758  (n=30)
+  Completeness: 0.1824 ± 0.0000  (n=30)
+  Model Parameter Randomization: 0.7431 ± 0.0703  (n=30)
+
+CLASS1:
+----------------------------------------
+  Infidelity: 0.0003 ± 0.0005  (n=30)
+  Complexity: 2.4074 ± 0.1636  (n=30)
+  Sensitivity: 0.0325 ± 0.0121  (n=30)
+  Ris: 14.4423 ± 0.7451  (n=30)
+  Ros: 7.8687 ± 1.7011  (n=30)
+  Rrs: 22.4771 ± 1.5047  (n=30)
+  Faithfulness: 0.5379 ± 0.2248  (n=30)
+  Completeness: 0.1824 ± 0.0000  (n=30)
+  Model Parameter Randomization: 0.7409 ± 0.1141  (n=30)
+
+Evaluating LIME...
+
+Processing CLASS0 samples for LIME...
+Processing class0 sample 1/30 (index 30)
+Processing class0 sample 2/30 (index 31)
+Processing class0 sample 3/30 (index 32)
+Processing class0 sample 4/30 (index 33)
+Processing class0 sample 5/30 (index 34)
+Processing class0 sample 6/30 (index 35)
+Processing class0 sample 7/30 (index 42)
+Processing class0 sample 8/30 (index 43)
+Processing class0 sample 9/30 (index 44)
+Processing class0 sample 10/30 (index 45)
+Processing class0 sample 11/30 (index 46)
+Processing class0 sample 12/30 (index 47)
+Processing class0 sample 13/30 (index 48)
+Processing class0 sample 14/30 (index 49)
+Processing class0 sample 15/30 (index 50)
+Processing class0 sample 16/30 (index 51)
+Processing class0 sample 17/30 (index 52)
+Processing class0 sample 18/30 (index 53)
+Processing class0 sample 19/30 (index 60)
+Processing class0 sample 20/30 (index 61)
+Processing class0 sample 21/30 (index 62)
+Processing class0 sample 22/30 (index 63)
+Processing class0 sample 23/30 (index 64)
+Processing class0 sample 24/30 (index 65)
+Processing class0 sample 25/30 (index 165)
+Processing class0 sample 26/30 (index 166)
+Processing class0 sample 27/30 (index 167)
+Processing class0 sample 28/30 (index 168)
+Processing class0 sample 29/30 (index 169)
+Processing class0 sample 30/30 (index 170)
+
+Processing CLASS1 samples for LIME...
+Processing class1 sample 1/30 (index 0)
+Processing class1 sample 2/30 (index 1)
+Processing class1 sample 3/30 (index 2)
+Processing class1 sample 4/30 (index 3)
+Processing class1 sample 5/30 (index 4)
+Processing class1 sample 6/30 (index 5)
+Processing class1 sample 7/30 (index 6)
+Processing class1 sample 8/30 (index 7)
+Processing class1 sample 9/30 (index 8)
+Processing class1 sample 10/30 (index 9)
+Processing class1 sample 11/30 (index 10)
+Processing class1 sample 12/30 (index 11)
+Processing class1 sample 13/30 (index 12)
+Processing class1 sample 14/30 (index 13)
+Processing class1 sample 15/30 (index 14)
+Processing class1 sample 16/30 (index 15)
+Processing class1 sample 17/30 (index 16)
+Processing class1 sample 18/30 (index 17)
+Processing class1 sample 19/30 (index 18)
+Processing class1 sample 20/30 (index 19)
+Processing class1 sample 21/30 (index 20)
+Processing class1 sample 22/30 (index 21)
+Processing class1 sample 23/30 (index 22)
+Processing class1 sample 24/30 (index 23)
+Processing class1 sample 25/30 (index 24)
+Processing class1 sample 26/30 (index 25)
+Processing class1 sample 27/30 (index 26)
+Processing class1 sample 28/30 (index 27)
+Processing class1 sample 29/30 (index 28)
+Processing class1 sample 30/30 (index 29)
+
+LIME RESULTS:
+============================================================
+
+CLASS0:
+----------------------------------------
+  Infidelity: 0.0006 ± 0.0005  (n=30)
+  Complexity: 2.6401 ± 0.0521  (n=30)
+  Sensitivity: 0.1193 ± 0.0159  (n=30)
+  Ris: 4.9162 ± 1.4953  (n=30)
+  Ros: 8.2955 ± 1.3017  (n=30)
+  Rrs: 10.7310 ± 2.1112  (n=30)
+  Faithfulness: 0.6017 ± 0.1228  (n=30)
+  Completeness: 0.2994 ± 0.0776  (n=30)
+  Model Parameter Randomization: 0.5710 ± 0.1328  (n=30)
+
+CLASS1:
+----------------------------------------
+  Infidelity: 0.0003 ± 0.0004  (n=30)
+  Complexity: 2.7353 ± 0.0642  (n=30)
+  Sensitivity: 0.1305 ± 0.0179  (n=30)
+  Ris: 4.5127 ± 1.6498  (n=30)
+  Ros: 9.1923 ± 1.3850  (n=30)
+  Rrs: 11.6178 ± 1.5007  (n=30)
+  Faithfulness: 0.3270 ± 0.2560  (n=30)
+  Completeness: 0.2092 ± 0.0698  (n=30)
+  Model Parameter Randomization: 0.3698 ± 0.1392  (n=30)
+
+Evaluating EBM...
+
+Processing CLASS0 samples for EBM...
+Processing class0 sample 1/30 (index 30)
+Processing class0 sample 2/30 (index 31)
+Processing class0 sample 3/30 (index 32)
+Processing class0 sample 4/30 (index 33)
+Processing class0 sample 5/30 (index 34)
+Processing class0 sample 6/30 (index 35)
+Processing class0 sample 7/30 (index 42)
+Processing class0 sample 8/30 (index 43)
+Processing class0 sample 9/30 (index 44)
+Processing class0 sample 10/30 (index 45)
+Processing class0 sample 11/30 (index 46)
+Processing class0 sample 12/30 (index 47)
+Processing class0 sample 13/30 (index 48)
+Processing class0 sample 14/30 (index 49)
+Processing class0 sample 15/30 (index 50)
+Processing class0 sample 16/30 (index 51)
+Processing class0 sample 17/30 (index 52)
+Processing class0 sample 18/30 (index 53)
+Processing class0 sample 19/30 (index 60)
+Processing class0 sample 20/30 (index 61)
+Processing class0 sample 21/30 (index 62)
+Processing class0 sample 22/30 (index 63)
+Processing class0 sample 23/30 (index 64)
+Processing class0 sample 24/30 (index 65)
+Processing class0 sample 25/30 (index 165)
+Processing class0 sample 26/30 (index 166)
+Processing class0 sample 27/30 (index 167)
+Processing class0 sample 28/30 (index 168)
+Processing class0 sample 29/30 (index 169)
+Processing class0 sample 30/30 (index 170)
+
+Processing CLASS1 samples for EBM...
+Processing class1 sample 1/30 (index 0)
+Processing class1 sample 2/30 (index 1)
+Processing class1 sample 3/30 (index 2)
+Processing class1 sample 4/30 (index 3)
+Processing class1 sample 5/30 (index 4)
+Processing class1 sample 6/30 (index 5)
+Processing class1 sample 7/30 (index 6)
+Processing class1 sample 8/30 (index 7)
+Processing class1 sample 9/30 (index 8)
+Processing class1 sample 10/30 (index 9)
+Processing class1 sample 11/30 (index 10)
+Processing class1 sample 12/30 (index 11)
+Processing class1 sample 13/30 (index 12)
+Processing class1 sample 14/30 (index 13)
+Processing class1 sample 15/30 (index 14)
+Processing class1 sample 16/30 (index 15)
+Processing class1 sample 17/30 (index 16)
+Processing class1 sample 18/30 (index 17)
+Processing class1 sample 19/30 (index 18)
+Processing class1 sample 20/30 (index 19)
+Processing class1 sample 21/30 (index 20)
+Processing class1 sample 22/30 (index 21)
+Processing class1 sample 23/30 (index 22)
+Processing class1 sample 24/30 (index 23)
+Processing class1 sample 25/30 (index 24)
+Processing class1 sample 26/30 (index 25)
+Processing class1 sample 27/30 (index 26)
+Processing class1 sample 28/30 (index 27)
+Processing class1 sample 29/30 (index 28)
+Processing class1 sample 30/30 (index 29)
+
+EBM RESULTS:
+============================================================
+
+CLASS0:
+----------------------------------------
+  Infidelity: 0.0333 ± 0.0299  (n=30)
+  Complexity: 2.7195 ± 0.1094  (n=30)
+  Sensitivity: 0.3745 ± 0.1584  (n=30)
+  Ris: 3.6636 ± 1.5605  (n=30)
+  Ros: 7.8774 ± 2.0174  (n=30)
+  Rrs: 7.7307 ± 1.9546  (n=30)
+  Faithfulness: 0.6072 ± 0.1114  (n=30)
+  Completeness: -4.1045 ± 1.1111  (n=30)
+  Model Parameter Randomization: 1.0000 ± 0.0000  (n=30)
+
+CLASS1:
+----------------------------------------
+  Infidelity: 0.0216 ± 0.0273  (n=30)
+  Complexity: 2.7306 ± 0.1213  (n=30)
+  Sensitivity: 0.2320 ± 0.1543  (n=30)
+  Ris: 2.6336 ± 1.3353  (n=30)
+  Ros: 10.9450 ± 2.0266  (n=30)
+  Rrs: 9.2817 ± 2.7073  (n=30)
+  Faithfulness: 0.4645 ± 0.1790  (n=30)
+  Completeness: 1.7407 ± 2.4829  (n=30)
+  Model Parameter Randomization: 1.0000 ± 0.0000  (n=30)
