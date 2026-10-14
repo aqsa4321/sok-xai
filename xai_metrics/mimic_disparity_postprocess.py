@@ -20,9 +20,9 @@ import pandas as pd
 from scipy.stats import mannwhitneyu
 
 # ---------- config ----------
-DATA_PATH = "/home/aqsa/sok/mimic_full.csv"
-RAW_CSV   = "/home/aqsa/sok/mimic_xai_disparity_full_raw.csv"
-OUT_DIR   = "/home/aqsa/sok"
+DATA_PATH = "sok/mimic_full.csv"
+RAW_CSV   = "sok/mimic_xai_disparity_full_raw.csv"
+OUT_DIR   = "sok"
 TARGET    = "mortality"
 
 METRICS_LIST = [

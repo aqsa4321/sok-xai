@@ -1,7 +1,0 @@
-model,dataset,brier_score,trainable_params,counting_method,n_support_vectors,n_features,dual_coef,intercept,n_trees,n_leaves,n_split_nodes,n_total_nodes,n_terms,n_main_effects,n_pairwise_terms,total_bin_scores
-LSTM,Breast Cancer,0.012143756996392828,85569,keras trainable_variables (sum of shapes),,,,,,,,,,,,
-SVM,Parkinson's,0.06477324967647499,81,n_SV * (dual_coef entries) + intercept,80.0,22.0,80.0,1.0,,,,,,,,
-XGBoost,MIMIC-IV (full),0.07387578876174238,4559,n_leaves via booster.trees_to_dataframe(),,,,,100.0,4559.0,4459.0,9018.0,,,,
-EBM,Breast Cancer,0.020764923546155556,42264,sum(len(term_scores_)) over all terms + intercept,,,,1.0,,,,,59.0,30.0,29.0,42263.0
-EBM,Parkinson's,0.05863593529100011,24730,sum(len(term_scores_)) over all terms + intercept,,,,1.0,,,,,43.0,22.0,21.0,24729.0
-EBM,MIMIC-IV (full),0.06999713794499547,209399,sum(len(term_scores_)) over all terms + intercept,,,,1.0,,,,,396.0,203.0,193.0,209398.0

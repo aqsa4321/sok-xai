@@ -8,7 +8,7 @@ Mirrors the Parkinson's XAI structure:
   - Three XAI methods: SHAP (TreeExplainer on XGBoost), LIME (on XGBoost), EBM
   - Nine metrics per sample, mean +/- std reported, split by class
 
-Output: /home/aqsa/sok/mimic_xai_results.txt
+Output: /sok/mimic_xai_results.txt
 """
 
 # ---------------------------------------------------------------------------
@@ -347,11 +347,11 @@ class MimicXAIEvaluator:
     test set with the 9 standard metrics.
     """
 
-    DATA_PATH    = "/home/aqsa/sok/mimic_full.csv"
-    MODELS_DIR   = "/home/aqsa/sok/models_mimic_full"
+    DATA_PATH    = "sok/mimic_full.csv"
+    MODELS_DIR   = "sok/models_mimic_full"
     XGB_PATH     = os.path.join(MODELS_DIR, "XGBoost_run0.joblib")
     EBM_PATH = os.path.join(MODELS_DIR, "EBM_run0.joblib")
-    RESULTS_PATH = "/home/aqsa/sok/mimic_xai_full_results.txt"
+    RESULTS_PATH = "sok/mimic_xai_full_results.txt"
     TARGET       = "mortality"
 
     def __init__(self, n_metric_samples=50, n_class0_samples=300, n_class1_samples=100,

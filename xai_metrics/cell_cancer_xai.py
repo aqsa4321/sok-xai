@@ -1437,9 +1437,9 @@ XAI_METHODS = {
     'saliency': True,
 }
 
-model_path       = "/home/aqsa/sok/efficientnetb0_run_1.h5"
-cancer_folder    = "/home/aqsa/sok/cell_cancer_dataset/myeloblast-cancer"
-noncancer_folder = "/home/aqsa/sok/cell_cancer_dataset/seg_neutrophil-noncancer"
+model_path       = "sok/efficientnetb0_run_1.h5"
+cancer_folder    = "sok/cell_cancer_dataset/myeloblast-cancer"
+noncancer_folder = "sok/cell_cancer_dataset/seg_neutrophil-noncancer"
 
 
 

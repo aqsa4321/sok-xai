@@ -52,8 +52,7 @@ Place datasets under `data/` before running anything:
 | Skin Cancer | `data/skin_cancer/{train,test}/{benign,malignant}/` | [Kaggle — Fanconic](https://www.kaggle.com/datasets/fanconic/skin-cancer-malignant-vs-benign) |
 | Cell Cancer | `data/cell_cancer/{myeloblast-cancer,seg_neutrophil-noncancer}/` (flat, split in code) | [Kaggle — UncleSamulus](https://www.kaggle.com/datasets/unclesamulus/blood-cells-image-dataset) |
 
-Image folders in this repo ship empty — download the raw images from the
-sources above.
+Image datasets are not included in the repository due to their size. Download the raw images from the sources listed above and place them in the corresponding `data/` subdirectories. Tabular datasets (Breast Cancer, Parkinson's) are included as CSVs. MIMIC-IV demo is included; full MIMIC-IV requires PhysioNet credentials.
 
 ## Pipeline
 

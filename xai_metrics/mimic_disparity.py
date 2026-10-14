@@ -23,7 +23,7 @@ Sensitive attributes (all binarized):
   - race:      not-WHITE vs WHITE
   - age:       >=65 vs <65
 
-Outputs to /home/aqsa/sok/:
+Outputs to sok/:
   - mimic_xai_disparity_results.txt   (paper-style table)
   - mimic_xai_disparity_summary.csv   (group means + p-values, tidy long format)
   - mimic_xai_disparity_raw.csv       (per-sample metric values, for plotting)
@@ -71,14 +71,14 @@ from interpret.glassbox import ExplainableBoostingClassifier
 # Paths and config
 # ===========================================================================
 
-DATA_PATH    = "/home/aqsa/sok/mimic_full.csv"
-MODELS_DIR   = "/home/aqsa/sok/models_mimic_full"
+DATA_PATH    = "sok/mimic_full.csv"
+MODELS_DIR   = "sok/models_mimic_full"
 XGB_PATH     = os.path.join(MODELS_DIR, "XGBoost_run0.joblib")
 EBM_PATH     = os.path.join(MODELS_DIR, "EBM_run0.joblib")
 
-OUT_TXT      = "/home/aqsa/sok/mimic_xai_disparity_full_results.txt"
-OUT_SUMMARY  = "/home/aqsa/sok/mimic_xai_disparity_full_summary.csv"
-OUT_RAW      = "/home/aqsa/sok/mimic_xai_disparity_full_raw.csv"
+OUT_TXT      = "sok/mimic_xai_disparity_full_results.txt"
+OUT_SUMMARY  = "sok/mimic_xai_disparity_full_summary.csv"
+OUT_RAW      = "sok/mimic_xai_disparity_full_raw.csv"
 
 TARGET       = "mortality"
 RANDOM_STATE = 42

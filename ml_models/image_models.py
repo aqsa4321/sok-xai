@@ -43,7 +43,7 @@ print("GPUs detected:", tf.config.list_physical_devices('GPU'))
 # ---------------------------------------------------------------------------
 DATASET = "skin_cancer"          # or "cell_cancer"
 
-REPO_ROOT   = "/home/aqsa/xai-cdss"
+REPO_ROOT   = "/xai-cdss"
 BASE_DIR    = os.path.join(REPO_ROOT, "data", DATASET)
 TRAIN_DIR   = os.path.join(BASE_DIR, "train")
 TEST_DIR    = os.path.join(BASE_DIR, "test")

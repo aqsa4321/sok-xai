@@ -98,5 +98,5 @@ if __name__ == "__main__":
     # Split cell_cancer (flat structure) into train/test.
     # Non-destructive: files are copied, originals stay in place.
     # Re-running is safe -- shutil.copy2 will overwrite.
-    CELL_DIR = "/home/aqsa/xai-cdss/data/cell_cancer"
+    CELL_DIR = "xai-cdss/data/cell_cancer"
     split_flat_dataset(CELL_DIR, CELL_DIR, test_ratio=0.2, seed=42, move=False)

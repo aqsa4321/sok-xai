@@ -2,7 +2,7 @@
 """
 Build a tabular feature CSV for MIMIC-IV demo in-hospital mortality prediction.
 
-Output: /home/aqsa/sok/mimic.csv
+Output: sok/mimic.csv
   - One row per ICU stay (first stay per patient, adults, >=24h)
   - Static demographics + admission features
   - Aggregated (min/max/mean/std/count) vitals and labs over first 24h of ICU stay
@@ -17,10 +17,10 @@ import pandas as pd
 
 warnings.filterwarnings("ignore")
 
-ROOT = Path("/home/aqsa/sok/mimic-iv-clinical-database-demo-2.2")
+ROOT = Path("sok/mimic-iv-clinical-database-demo-2.2")
 HOSP = ROOT / "hosp"
 ICU = ROOT / "icu"
-OUT_PATH = Path("/home/aqsa/sok/mimic.csv")
+OUT_PATH = Path("sok/mimic.csv")
 
 OBS_HOURS = 24       # observation window length
 MIN_LOS_HOURS = 24   # require at least this much ICU time

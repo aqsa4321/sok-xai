@@ -2,7 +2,7 @@
 """
 Build a tabular feature CSV for MIMIC-IV demo in-hospital mortality prediction.
 
-Output: /home/aqsa/sok/mimic.csv
+Output: /sok/mimic.csv
   - One row per ICU stay (first stay per patient, adults, >=24h)
   - Static demographics + admission features
   - Aggregated (min/max/mean/std/count) vitals and labs over first 24h of ICU stay
@@ -20,8 +20,8 @@ warnings.filterwarnings("ignore")
 ROOT = Path("/shared_data/mimiciv/mimic-iv-3.1")
 HOSP = ROOT / "hosp"
 ICU = ROOT / "icu"
-OUT_PATH = Path("/home/aqsa/sok/mimic_full.csv")
-CHECKPOINT_DIR = Path("/home/aqsa/sok/mimic_full_checkpoints")
+OUT_PATH = Path("sok/mimic_full.csv")
+CHECKPOINT_DIR = Path("sok/mimic_full_checkpoints")
 CHECKPOINT_DIR.mkdir(exist_ok=True)
 
 OBS_HOURS = 24       # observation window length

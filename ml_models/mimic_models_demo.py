@@ -4,7 +4,7 @@
 MIMIC-IV demo: in-hospital mortality prediction.
 Same structure as Breast Cancer / Parkinson's pipeline.
   - 11 models x 5 runs each, mean +/- std reported
-  - All trained models saved to /home/aqsa/sok/models_mimic/ for later XAI use
+  - All trained models saved to /sok/models_mimic/ for later XAI use
   - Scaler and split indices also saved for reproducible XAI
 """
 
@@ -38,9 +38,9 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import GRU, LSTM, Conv1D, MaxPooling1D, Flatten, Dense, Dropout
 from tensorflow.keras.callbacks import EarlyStopping, ReduceLROnPlateau
 
-DATA_PATH    = "/home/aqsa/sok/mimic.csv"
-RESULTS_PATH = "/home/aqsa/sok/mimic_results.txt"
-MODELS_DIR   = "/home/aqsa/sok/models_mimic"
+DATA_PATH    = "sok/mimic.csv"
+RESULTS_PATH = "sok/mimic_results.txt"
+MODELS_DIR   = "sok/models_mimic"
 TARGET       = "mortality"
 N_RUNS       = 5
 

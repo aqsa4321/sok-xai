@@ -4,7 +4,7 @@
 Parkinson's Disease: binary status prediction.
 Same structure as Breast Cancer / MIMIC pipeline.
   - 11 models x 5 runs each, mean +/- std reported
-  - All trained models saved to /home/aqsa/sok/models_parkinson/ for later XAI use
+  - All trained models saved to /sok/models_parkinson/ for later XAI use
   - Scaler and split indices also saved for reproducible XAI
 """
 
@@ -38,9 +38,9 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import GRU, LSTM, Conv1D, MaxPooling1D, Flatten, Dense, Dropout
 from tensorflow.keras.callbacks import EarlyStopping, ReduceLROnPlateau
 
-DATA_PATH    = "/home/aqsa/sok/parkinson.csv"
-RESULTS_PATH = "/home/aqsa/sok/parkinson_results.txt"
-MODELS_DIR   = "/home/aqsa/sok/models_parkinson"
+DATA_PATH    = "sok/parkinson.csv"
+RESULTS_PATH = "sok/parkinson_results.txt"
+MODELS_DIR   = "sok/models_parkinson"
 TARGET       = "status"
 N_RUNS       = 5
 

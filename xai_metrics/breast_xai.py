@@ -7,11 +7,11 @@ Breast Cancer XAI evaluation.
   - Three XAI methods: SHAP (KernelExplainer on LSTM), LIME (on LSTM), EBM
   - Nine metrics per sample, mean +/- std reported, split by class
 
-Output: /home/aqsa/sok/breast_xai_results.txt
+Output: breast_xai_results.txt
 
-echo "--- MIMIC ---"; tail -3 /home/aqsa/sok/mimic_xai_v2_output.txt
-echo "--- BREAST ---"; tail -3 /home/aqsa/sok/breast_xai_v1_output.txt
-echo "--- PARKINSON ---"; tail -3 /home/aqsa/sok/parkinson_xai_v1_output.txt
+echo "--- MIMIC ---"; tail -3 sok/mimic_xai_v2_output.txt
+echo "--- BREAST ---"; tail -3 sok/breast_xai_v1_output.txt
+echo "--- PARKINSON ---"; tail -3 sok/parkinson_xai_v1_output.txt
 
 """
 
@@ -367,11 +367,11 @@ def compute_model_parameter_randomization(model_predict_func, x_sample, explanat
 # ===========================================================================
 
 class BreastXAIEvaluator:
-    DATA_PATH    = "/home/aqsa/sok/breast.csv"
-    MODELS_DIR   = "/home/aqsa/sok/models_breast"
+    DATA_PATH    = "sok/breast.csv"
+    MODELS_DIR   = "sok/models_breast"
     LSTM_PATH    = os.path.join(MODELS_DIR, "LSTM_run0.h5")
     EBM_PATH     = os.path.join(MODELS_DIR, "EBM_run0.joblib")
-    RESULTS_PATH = "/home/aqsa/sok/breast_xai_results.txt"
+    RESULTS_PATH = "sok/breast_xai_results.txt"
     TARGET       = "diagnosis"
 
     def __init__(self, n_metric_samples=50, n_class0_samples=30, n_class1_samples=30,
