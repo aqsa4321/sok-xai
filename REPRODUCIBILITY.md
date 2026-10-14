@@ -148,7 +148,7 @@ Data provenance:
 - Parkinson's -- UCI Parkinson's Disease Detection (Debasis Samal, Kaggle)
 - MIMIC-IV -- built from PhysioNet MIMIC-IV v2.2 (full) via preprocess/build_mimic_full.py; demo version via preprocess/build_mimic_demo.py. Requires PhysioNet credentialing.
 - Skin Cancer -- "Skin Cancer: Malignant vs Benign" (Fanconic, Kaggle)
-- Cell Cancer -- Blood Cells Image Dataset (UncleSamulus, Kaggle)
+- Cell Cancer -- Blood Cell Images for Cancer Detection (Sumith Singh, Kaggle)
 
 Model artifacts saved for reproducibility (per dataset, under models_<dataset>/):
 - scaler.joblib, feature_names.json
