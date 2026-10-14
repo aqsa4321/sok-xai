@@ -70,7 +70,7 @@ python preprocess/build_mimic_full.py    # only if you have full MIMIC access
 
 For cell_cancer only (once images are in place). Turns the flat
 class-per-folder layout into the `train/{class}/`, `test/{class}/`
-structure that `image_models.py` expects.
+structure that `image_models_skin_cancer.py` expects.
 
 ```bash
 python preprocess/prep_images.py
@@ -93,7 +93,8 @@ python ml_models/mimic_models_full.py
 
 # For image models, edit the DATASET constant at the top to switch
 # between "skin_cancer" and "cell_cancer", then run:
-python ml_models/image_models.py
+python ml_models/image_models_skin_cancer.py   # for skin cancer
+python ml_models/image_models_cell_cancer.py   # for cell cancer
 ```
 
 ### 3. Generate explanations
